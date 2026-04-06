@@ -88,12 +88,14 @@ export function AboutSection() {
               <Stagger className="grid grid-cols-2 gap-4">
                 {(t?.about?.highlights ?? [])?.map?.((h: any, i: number) => {
                   const Icon = highlightIcons?.[i] ?? Target;
+                  const suffixes = (t?.about as any)?.highlightsSuffix ?? ['+', '+', '+', '+'];
+                  const suffix = suffixes?.[i] ?? '+';
                   return (
                     <StaggerItem key={i}>
                       <div className="bg-card rounded-xl p-5 text-center" style={{ boxShadow: 'var(--shadow-sm)' }}>
                         <Icon className="w-5 h-5 text-primary mx-auto mb-2" />
                         <div className="text-2xl font-display font-bold tracking-tight">
-                          <CountUp target={h?.value ?? '0'} suffix={h?.value?.includes?.('+') ? '+' : ''} />
+                          <CountUp target={h?.value ?? '0'} suffix={suffix} />
                         </div>
                         <div className="text-xs text-muted-foreground mt-1">{h?.label ?? ''}</div>
                       </div>

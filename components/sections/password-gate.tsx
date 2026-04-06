@@ -91,6 +91,7 @@ export function PasswordGate() {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e?.target?.value ?? '')}
                 placeholder={t?.password?.placeholder ?? 'Senha'}
                 className="pr-10 text-center text-lg tracking-widest font-mono h-12"
+                autoComplete="new-password"
                 autoFocus
               />
               <button

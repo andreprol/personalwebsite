@@ -81,13 +81,13 @@ export function ContactSection() {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
-                  <span>contato@andreprol.com</span>
+                  <span>andreprol@andreprol.com.br</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="p-2 rounded-lg bg-primary/10">
                     <MapPin className="w-4 h-4 text-primary" />
                   </div>
-                  <span>São Paulo, Brasil</span>
+                  <span>Rio de Janeiro, Brasil</span>
                 </div>
               </div>
             </div>

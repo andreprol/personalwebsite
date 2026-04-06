@@ -8,7 +8,7 @@ import { usePassword } from '@/lib/password-context';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { Container } from '@/components/layouts/container';
 
-const navItems = ['home', 'about', 'experience', 'skills', 'portfolio', 'blog', 'contact'] as const;
+const navItems = ['home', 'about', 'experience', 'education', 'diplomas', 'skills', 'portfolio', 'blog', 'contact'] as const;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);

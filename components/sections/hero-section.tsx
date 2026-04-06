@@ -1,14 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/layouts/container';
 import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+
+  const cvUrl = '/Andre_Prol_CV_EN.docx';
+  const cvLabel = lang === 'pt' ? 'Baixar CV' : 'Download CV';
 
   const scrollTo = (id: string) => {
     document?.getElementById?.(id)?.scrollIntoView?.({ behavior: 'smooth' });
@@ -88,6 +91,12 @@ export function HeroSection() {
                 <Mail className="w-4 h-4" />
                 {t?.hero?.contact ?? 'Contato'}
               </Button>
+              <a href={cvUrl} download>
+                <Button size="lg" variant="outline" className="gap-2">
+                  <Download className="w-4 h-4" />
+                  {cvLabel}
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div

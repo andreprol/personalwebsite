@@ -1,19 +1,20 @@
 'use client';
 
-import { Code2, Server, Cloud, Brain, Users } from 'lucide-react';
+import { Code2, Server, Cloud, Bot, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/language-context';
 import { Container } from '@/components/layouts/container';
 import { Section } from '@/components/layouts/section';
 import { FadeIn, Stagger, StaggerItem } from '@/components/ui/animate';
 
-const categoryIcons = [Code2, Server, Cloud, Brain, Users];
+const categoryIcons = [Code2, Server, Cloud, Bot, Shield, Users];
 const categoryColors = [
   'from-blue-500/10 to-cyan-500/10 text-blue-500',
   'from-green-500/10 to-emerald-500/10 text-green-500',
   'from-orange-500/10 to-amber-500/10 text-orange-500',
   'from-purple-500/10 to-pink-500/10 text-purple-500',
-  'from-rose-500/10 to-red-500/10 text-rose-500',
+  'from-red-500/10 to-rose-500/10 text-red-500',
+  'from-teal-500/10 to-cyan-500/10 text-teal-500',
 ];
 
 export function SkillsSection() {
