@@ -19,6 +19,9 @@ jobs:
       - name: Enable Corepack (Yarn)
         run: corepack enable
 
+      - name: Remove committed node_modules
+        run: rm -rf node_modules
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
