@@ -16,20 +16,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Enable Corepack (Yarn)
-        run: corepack enable
-
       - name: Remove committed node_modules
         run: rm -rf node_modules
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install --legacy-peer-deps
 
       - name: Build static export
-        run: yarn build
+        run: npm run build
         env:
           NEXT_OUTPUT_MODE: export
           NEXT_DIST_DIR: out
+          NEXT_TELEMETRY_DISABLED: 1
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
